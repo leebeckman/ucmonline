@@ -1,0 +1,145 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+	<welcome-file-list>
+		<welcome-file>home</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>PageServlet</servlet-name>
+		<servlet-class>ucmsite.servlets.PageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PageServlet</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>ucmsite.servlets.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RecacheServlet</servlet-name>
+		<servlet-class>ucmsite.servlets.RecacheServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecacheServlet</servlet-name>
+		<url-pattern>/recache</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueuedCacheServlet</servlet-name>
+		<servlet-class>ucmsite.servlets.QueuedCacher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueuedCacheServlet</servlet-name>
+		<url-pattern>/tasks/queuedcache</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+        <web-resource-collection>
+            <url-pattern>/cron/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/recache</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+       <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/tasks/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+	
+	<context-param>
+		<description>Path to the homepage file</description>
+		<param-name>homepageURL</param-name>
+		<param-value>/home/home.html</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>Google Docs folders to load in the page cache</description>
+		<param-name>contentFolders</param-name>
+		<param-value>home,connect,events,resources,about,give,components</param-value>
+	</context-param>
+		
+	<context-param>
+		<description>Path to the header file</description>
+		<param-name>headerURL</param-name>
+		<param-value>/components/header.html</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>Path to the navigation file</description>
+		<param-name>navigationURL</param-name>
+		<param-value>/components/navigationbar.html</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>Path to the footer file</description>
+		<param-name>footerURL</param-name>
+		<param-value>/components/footer.html</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>The username to the main UCM Google account, where site documents should be located</description>
+		<param-name>googleusername</param-name>
+		<param-value>ubc.ucmonline@gmail.com</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>The password to the above account</description>
+		<param-name>googlepassword</param-name>
+		<param-value>ubcucmonline2026</param-value>
+	</context-param>
+
+	
+<!--OnPositive Tools-->
+<servlet>
+		<servlet-name>profilerServlet</servlet-name>
+		<servlet-class>com.onpositive.gae.tools.servlets.ProfilerServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+		<servlet-name>profilerServlet</servlet-name>
+		<url-pattern>/appwrench/profiler</url-pattern>
+</servlet-mapping>
+<filter id="profilerFilter">
+	 <filter-name>profileJsp</filter-name>
+     <filter-class>com.onpositive.gae.tools.servlets.JSPFilter</filter-class>
+</filter>
+<filter-mapping>
+        <filter-name>profileJsp</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+</filter-mapping>
+<servlet>
+<servlet-name>SessionAuth</servlet-name>
+<servlet-class>com.onpositive.auth.AuthServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>SessionAuth</servlet-name>
+<url-pattern>/appwrench/auth</url-pattern>
+</servlet-mapping>
+<servlet>
+		<servlet-name>baseViewerServlet</servlet-name>
+		<servlet-class>com.onpositive.gae.tools.servlets.BaseViewerServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+		<servlet-name>baseViewerServlet</servlet-name>
+		<url-pattern>/appwrench/baseviewer</url-pattern>
+</servlet-mapping>
+</web-app>

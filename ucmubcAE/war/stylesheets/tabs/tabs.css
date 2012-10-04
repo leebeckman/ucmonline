@@ -1,0 +1,60 @@
+div.documentTabs {
+    margin:0 0 20px;
+    width:100%;
+}
+
+ul.documentTabs {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:transparent url(pixel.gif) repeat-x scroll left bottom;
+    float:left;
+    list-style-type:none;
+    width:100%;
+}
+
+ul.documentTabs li {
+    float:left;
+    margin:0 2px 0 0;
+}
+
+ul.documentTabs a {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#FFFFFF none repeat scroll 0 0;
+    border-color:#CCCCCC;
+    border-style:solid solid none;
+    border-width:1px 1px 0;
+    color:#FD0101;
+    display:block;
+    float:left;
+    font-weight:bold;
+    padding:4px 8px;
+    text-decoration:none;
+}
+
+ul.documentTabs a:hover {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#EEEEEE none repeat scroll 0 0;
+}
+
+ul.documentTabs a.active {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#EEEEEE none repeat scroll 0 0;
+    color:#666666;
+    cursor:default;
+    padding-bottom:4px;
+}
+
+.tabs-container {
+    border-color: #cccccc;
+    border-style: solid;
+    border-width: 1px;
+    clear:left;
+    padding:15px 8px 0;
+}

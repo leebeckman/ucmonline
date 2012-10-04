@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ucmpage sidelogo="images/sitedesign/sidelogos/sidelogo_events.png">
+    <banner src="images/content/banners/Emerge1.png"></banner>
+    
+    <header>UCM Weekly Email</header>
+    
+    <text>
+        Use the form below to subscribe to our email list. Only your email address is required. This email list is a way to keep in touch with what's happening at UCM. Weekly emails will be sent with announcements, plus other periodic messages when we want to get in touch with you in a hurry!
+    </text>
+    
+    <html>
+        
+        <a href="" class="formbutton" id="buttonUCMEmail" style="width: 91px ;background-image: url('http://ucmubc.appspot.com/images/content/buttons/signupformbutton.png')"></a> 
+        <div style="overflow: hidden;" id="UCMEmail"> 
+            <form action='http://madmimi.com/signups/subscribe/3141' method='post'>
+                <table>
+                    <tr>
+                        <td>
+                            <p class="text">Email: </p>
+                        </td>
+                        <td>
+                            <input class="emailformfield" id='signup_email' name='signup[email]' type='text' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text">Name: </p>
+                        </td>
+                        <td>
+                            <input class="emailformfield" id='signup_name' name='signup[name]' type='text' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text">Phone #: </p>
+                        </td>
+                        <td>
+                            <input class="emailformfield" id='signup_phone' name='signup[phone]' type='text' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="text">Residence: </p>
+                        </td>
+                        <td>
+                            <select class="emailformfield" id='signup_address' name="signup[address]">
+                                <option value="Unspecified">Unspecified</option>
+                                <option value="Off Campus">Off Campus</option>
+                                <option value="Residence/On Campus: Acadia">Residence/On Campus: Acadia</option>
+                                <option value="Residence/On Campus: Carey Hall">Residence/On Campus: Carey Hall</option>
+                                <option value="Residence/On Campus: Fairview">Residence/On Campus: Fairview</option>
+                                <option value="Residence/On Campus: Gage">Residence/On Campus: Gage</option>
+                                <option value="Residence/On Campus: Marine Drive">Residence/On Campus: Marine Drive</option>
+                                <option value="Residence/On Campus: Other/Unspecified">Residence/On Campus: Other/Unspecified</option>
+                                <option value="Residence/On Campus: Phi Delta Theta">Residence/On Campus: Phi Delta Theta</option>
+                                <option value="Residence/On Campus: Ritsumeikan">Residence/On Campus: Ritsumeikan</option>
+                                <option value="Residence/On Campus: St. Andrew's">Residence/On Campus: St. Andrew's</option>
+                                <option value="Residence/On Campus: St. John's">Residence/On Campus: St. John's</option>
+                                <option value="Residence/On Campus: Totem">Residence/On Campus: Totem</option>
+                                <option value="Residence/On Campus: Thunderbird">Residence/On Campus: Thunderbird</option>
+                                <option value="Residence/On Campus: Vanier">Residence/On Campus: Vanier</option>
+                                <option value="Residence/On Campus: VST">Residence/On Campus: VST</option>
+                                <option value="Residence/On Campus: Other">Residence/On Campus: Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input style="margin-left: 10px" name='commit' type='submit' value='Sign Up' />
+            </form>    
+        </div> 
+        <script type="text/javascript">window.addEvent('domready', function(){var UCMEmail = new Fx.Reveal('UCMEmail', {mode: 'horizontal', heightOverride: 180, duration: 0});UCMEmail.dissolve();$('buttonUCMEmail').addEvent('click', function(e){e = new Event(e);UCMEmail.toggle();e.stop();});});</script> 
+        
+        
+    </html>
+    
+    
+</ucmpage>

@@ -1,0 +1,508 @@
+html, body {
+    height: 100%;
+	text-align: center;
+	background-color: #999999;
+	font-family: Calibri, Arial;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: 0;
+	margin:0;
+	padding:0;
+	border: 0 none;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+* {
+}
+
+.rounded {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+} 
+
+div, span, applet, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	outline-color: -moz-use-text-color;
+	outline-style: none;
+	outline-width: 0;
+	margin:0;
+	padding:0;
+	border: 0 none;
+}
+
+table {
+}
+
+td {
+    vertical-align: top;
+    padding-right: 8px;
+}
+
+td.triimagecolumn {
+    width: 200px;
+}
+
+#backdrop	{
+    min-height: 100%;
+    background-color: #999999;
+	/*background-image:  url("../images/sitedesign/gradient_background.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;*/
+}
+
+#whitewrapper {
+    min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 984px;
+	background-color: #ffffff;
+}
+
+#backcenter {
+    min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 984px;
+	background-color: #ffffff;
+}
+
+* html #backdrop {
+    height: 100%;
+}
+
+* #whitewrapper {
+    height: 100%;
+}
+
+* #backdrop {
+    height: 100%;
+}
+	
+	#header {
+	    margin-left: auto;
+	    margin-right: auto; 
+	}
+    	
+    	#headerimage {
+    	    float: right;
+    	    background-image: url("../images/sitedesign/homepage/header_main_v2.png");
+    		width: 660px;
+    		height: 120px;
+    	}
+    	
+    	#logo {
+    		float: left;
+    		background-image: url("../images/sitedesign/homepage/ucmlogo.png");
+    		width: 300px;
+    		height: 120px;
+    	}
+		
+	/* Navigation styles based on suckerfish dropdowns: http://htmldog.com/articles/suckerfish/dropdowns/ */
+
+	#navigationbar {
+	    margin-left: 2px;
+	    margin-right: auto;
+		clear: both;
+		height: 30px;
+		/*border-top: solid #999999 2px;*/
+		/*border-bottom: solid #999999 2px;*/
+		border: none transparent 0px;
+		text-align: left;
+		
+		list-style: none;
+		line-height: 1;
+	}
+	
+	#navigationbar ul {
+		list-style: none;
+		line-height: 1;
+		
+		border-color: #999999;
+		border-style: solid;
+		border-top-width: 1px;
+		border-left-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 0px;
+		float:left;
+		font-weight:bold;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		margin:0 0 0em;
+		z-index:10;
+	}
+	
+	#navigationbar a {
+		display: block;
+		width: 196px;
+		font-family: Calibri;
+		font-size: 11pt;
+		font-weight: 500;
+		text-decoration: none;
+		color: #555555;
+		line-height: 25px;
+		text-indent: 10px;
+	}
+	
+	#navigationbar li a {
+	    width: 192px;
+	}
+	
+	#navigationbar li {
+		float: left;
+		width: 196px;
+		background-color: #cccccc;
+	}
+	
+	#navigationbar li li {
+		width: 192px;
+		border-bottom: solid #999999 1px;
+	}
+	
+	#navigationbar li:hover, #navigationbar li.sfhover {
+		background-color: #999999;
+	}
+	
+	#navigationbar li ul {
+		position: absolute;
+		width: 192px;
+		left: -999em;
+		
+		border-width: 2px;
+		font-weight: normal;
+		height: auto;
+	}
+	
+	#navigationbar li:hover ul ul, #navigationbar li.sfhover ul ul {
+		left: -999em;
+	}
+	
+	#navigationbar li:hover ul, #navigationbar li li:hover ul, #navigationbar li.sfhover ul, #navigationbar li li.sfhover ul {
+		left: auto;
+	}
+	
+	#navigationbar li ul ul {
+		margin: -23px 0 0 196px;
+	}
+	
+	.toplevelnav a {
+		padding-top: 3px;
+		padding-bottom: 2px;
+	}
+	
+		/* nav image styles */
+		
+		.navheadlink {
+			height: 30px;
+		}
+		
+		li.menuimage {
+			background-position: 0 0;
+		}
+		
+		li.menuimage:hover  {
+			background-position: 0 -30px;
+		}
+			
+	#ucmonlinecontent {
+		width: 940px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 10px;
+		text-align: left;
+		clear: both;
+		overflow: hidden;
+	}
+    
+		#adrotator {
+			text-align: left;
+			background-color: #000000;
+			border: solid 2px #777777;
+			float: left;
+			width: 596px;
+			height: 290px;
+			margin-right: 12px;
+			overflow: hidden;
+		}
+		
+		#mediaplayer {
+			border: solid 2px #777777;
+			width: 324px;
+			height: 290px;
+			margin-left: 10px;
+			text-align: center;
+			background-color: #000000;
+			overflow: hidden;
+		}
+		
+		/* Homepage bottom navigation button styles */
+		
+		#bottombuttons {
+			padding-top: 15px;
+			clear: left;
+		}
+		
+			.buttoncontainer {
+				width: 188px;
+				float: left;
+				margin-bottom: 15px;
+			}
+		    
+        		.bottombutton {
+			        display: block;
+			        width: 180px;
+			        height: 120px;
+		    	    border: solid 2px #ffffff;
+        		}
+        		
+        		.bottombutton:hover {
+		    	    border: solid 2px #777777
+        		}
+        		
+        #homepagecontent {
+			width: 750px;
+            float: left;
+            border: solid 2px #777777
+        }
+        
+        #rightbuttons {
+			width: 180px;
+            float: right;
+            text-align: right;
+        }
+        
+            .rightbutton {
+                float: right;
+                display: block;
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 170px;
+                background-position: 0 0;
+                margin-bottom: 5px;
+            }
+            
+            .rightbutton:hover {
+                background-position: 0 -40px;
+            }
+        		
+        #newherebutton {
+            display: block;
+            width: 150px;
+            height: 119px;
+            background-image: url('../images/content/buttons/newhere.png');
+            background-position: 0 0;
+        }
+        
+        #newherebutton:hover {
+            background-position: 0 -119px;
+        }
+        
+        .formbutton {
+            display: block;
+            background-repeat: no-repeat;
+            height: 30px;
+            background-position: 0 0;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        
+        .formbutton:hover {
+            background-position: 0 -30px;
+        }
+        
+        .roundwrapper {
+        	border: solid 2px #777777;
+        	clear: both;
+        	padding: 20px;
+        }
+    
+        .pagebanner {
+        	border: solid 2px #777777;
+        	clear: both;
+        	height: 200px;
+        	background-repeat: no-repeat;
+        	background-position: 0 0;
+        	margin-bottom: 10px;
+        }
+        
+        #sidelogo {
+            width: 200px;
+        }
+        
+        #logoColumn {
+            width: 200px;
+        }
+        
+        #rightContentGap {
+            width: 40px;
+        }
+
+        .spreadsheet {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+            .spreadsheethead {
+                font-weight: bold;
+                font-style: italic;
+                font-size: 11pt;
+                background-color: #FD0101;
+                color: #ffffff;
+                border: solid #bbbbbb 1px;
+                padding-top: 1px;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            
+            .spreadsheetrow {
+                font-weight: 550;
+                font-size: 8pt;
+                color: #222222;
+                border: solid #bbbbbb 1px;
+                padding-top: 15px;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+
+        p {
+		    clear: both;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-bottom: 15px;
+		}
+		
+		ul.content, ol.content {
+		    clear: both;
+			margin-left: 40px;
+			margin-right: 10px;
+			padding-bottom: 15px;
+			line-height: 20px;
+		}
+		
+		ul.lines {
+		    clear: both;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-bottom: 15px;
+			list-style-type: none;
+		}
+		
+		.header {
+		    font-size: 18pt;
+			font-weight: 800;
+		    color: #FD0101;
+		}
+		
+		.subheader {
+		    padding-top: 20px;
+		    font-size: 11pt;
+			font-weight: bold;
+		    color: #FD0101;
+		}
+		
+		.text {
+		    font-size: 10pt;
+			font-weight: 550;
+			color: #222222;
+		}
+		
+		.footertext {
+		    font-size: 8pt;
+			font-weight: 550;
+			color: #ffffff;
+		}
+		
+		.indent {
+		    margin-left: 20px;
+		}
+		
+		.highlight {
+		    color: #FD0101;
+		}
+		
+		.email {
+		    font-size: 10pt;
+			font-weight: 550;
+		    text-decoration: none;
+		    color: #FD0101;
+		}
+		
+		.email:hover {
+		    color: #222222;
+		}
+		
+		.link {
+		    text-decoration: none;
+		    color: #FD0101;
+		}
+		
+		.link:hover {
+		    color: #222222;
+		}
+		
+		.error {
+		    font-size: 10pt;
+			font-weight: bold;
+			color: #FD0101;
+			padding: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: left;
+			width: 200px;
+			border: solid #000000 1px;
+		}
+		
+		.emailformfield {
+		    width: 260px;
+		}
+		
+		.profiledata {
+		    clear: both;
+			margin-left: 10px;
+			list-style-type: none;
+		}
+		
+		.profileheader {
+		    font-size: 18pt;
+			font-weight: bold;
+		    color: #FD0101;
+		}
+		
+		.profileposition {
+		    font-size: 10pt;
+			font-weight: bold;
+		    color: #222222;
+		}
+		
+		.profilepic {
+		    display: block;
+		    border: solid 2px #333333;
+		    width: 175px;
+		    height: 110px;
+		    margin-left: 10px;
+		    margin-bottom: 30px;
+		}
+		
+		img.profilefullpic {
+		    width: 300px;
+		}
+		
+#footer {
+    background-color: #888888;
+    margin-top: 60px;
+    text-align: right;
+}
+		
