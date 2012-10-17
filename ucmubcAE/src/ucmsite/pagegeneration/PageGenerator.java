@@ -39,7 +39,6 @@ public class PageGenerator {
 	
 	private PageGenerator(HttpServletRequest req) {
 		try {
-			AppEngineLogger.log("SERVERNAME: " + req.getServerName());
 			this.rootURL = new URL(req.getScheme(), req.getServerName(), req.getServerPort(), "/").toString();
 			
 			builder = new SAXBuilder();
@@ -153,17 +152,10 @@ public class PageGenerator {
 		AppEngineLogger.log("Got decorations");
 		
 		try {
-//			headerDoc = builder.build(fixCharacters(getClass().getResourceAsStream("../resources/pages" + headerURL)));
-//			navigationDoc = builder.build(fixCharacters(getClass().getResourceAsStream("../resources/pages" + navURL)));
-//			footerDoc = builder.build(fixCharacters(getClass().getResourceAsStream("../resources/pages" + footerURL)));
-//			contentDoc = builder.build(fixCharacters(getClass().getResourceAsStream("../resources/pages" + url)));
+			AppEngineLogger.log("GET DOCUMENT: args: " + googleURL[0] + " and " + googleURL[1] + " is: " + GoogleAccessor.getGoogleAccessor().getDocument(googleURL[0], googleURL[1]));
 			InputStream contentStream = fixCharacters(GoogleAccessor.getGoogleAccessor().getDocument(googleURL[0], googleURL[1]));
-//			String contentString = convertStreamToString(contentStream);
-//			AppEngineLogger.log("ContentPreParse: " + contentString);
 			contentDoc = builder.build(contentStream);
 		} catch (Exception e) {
-			AppEngineLogger.log("Exception getting contentDoc: " + e.getMessage());
-			e.printStackTrace();
 			return null;
 		}
 

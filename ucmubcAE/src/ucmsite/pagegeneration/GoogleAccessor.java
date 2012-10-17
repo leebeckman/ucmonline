@@ -9,6 +9,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.poi.hwpf.extractor.WordExtractor;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import ucmsite.util.AppEngineLogger;
 
@@ -178,7 +180,8 @@ public class GoogleAccessor {
 				InputStream inStream = null;
 				inStream = ms.getInputStream();
 		
-				WordExtractor extractor = new WordExtractor(inStream);
+				XWPFDocument doc = new XWPFDocument(inStream);
+				XWPFWordExtractor extractor = new XWPFWordExtractor(doc);
 				String extractStr = extractor.getText();
 				extractStr = extractStr.replaceAll("[“”“”““”“”“”“”“”]", "\"");
 				extractStr = extractStr.replaceAll("[’’]", "\'");
