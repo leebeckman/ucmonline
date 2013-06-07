@@ -168,7 +168,7 @@ public class GoogleAccessor {
 				String docResId = docEntry.getResourceId();
 				String docId = docResId.substring(docResId.lastIndexOf(":") + 1);
 				String type = "doc";
-				String exportUrl = "https://docs.google.com/feeds/download/documents/Export?docId=" +
+				String exportUrl = "https://docs.google.com/feeds/download/documents/export/Export?id=" +
 				docId + "&exportFormat=" + type;
 	
 				MediaContent mc = new MediaContent();
